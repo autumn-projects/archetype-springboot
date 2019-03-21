@@ -8,7 +8,10 @@ public class LongProcessController {
 
     @RequestMapping("/long-process")
     public String pause() throws InterruptedException {
-        Thread.sleep(20*1000);
+        for (int i = 0; i < 10; i++) {
+            Thread.sleep(1000);
+            System.out.println(i);
+        }
         System.out.println("Process finished");
         return "Process finished";
     }
