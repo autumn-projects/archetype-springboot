@@ -8,4 +8,19 @@ spring:
     username: test
     password: 123456
 
-
+management:
+  server:
+    port: 10212
+    servlet:
+      context-path: /
+    ssl:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true #启用shutdown端点
