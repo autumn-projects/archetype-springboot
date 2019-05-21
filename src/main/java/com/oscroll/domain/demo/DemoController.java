@@ -16,11 +16,18 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
-    @ApiOperation(value = "查找")
+    @ApiOperation(value = "查找全部")
     @GetMapping("/find")
     @ResponseBody
     public List<DemoEntity> findAll(){
         return demoService.findAll();
+    }
+
+    @ApiOperation(value = "查找")
+    @GetMapping("/findOne")
+    @ResponseBody
+    public DemoEntity findByKey(Integer id){
+        return demoService.findByKey(id);
     }
 
 }

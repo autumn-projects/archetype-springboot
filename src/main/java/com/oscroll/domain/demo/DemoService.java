@@ -15,4 +15,7 @@ public class DemoService {
         return demoMapper.selectAll();
     }
 
+    public DemoEntity findByKey(Integer id){
+        return demoMapper.findByKey(id);
+    }
 }

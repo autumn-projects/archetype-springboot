@@ -11,4 +11,6 @@ public interface DemoMapper {
     @Select("select * from test")
     List<DemoEntity> selectAll();
 
+    DemoEntity findByKey(Integer id);
+
 }
