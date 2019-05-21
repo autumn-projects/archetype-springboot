@@ -1,7 +1,5 @@
-package com.oscroll.service;
+package com.oscroll.domain.demo;
 
-import com.oscroll.entity.DemoEntity;
-import com.oscroll.mapper.DemoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.oscroll.controller;
+package com.oscroll.domain.longprocess;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

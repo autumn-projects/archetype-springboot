@@ -1,4 +1,4 @@
-package com.oscroll.entity;
+package com.oscroll.domain.demo;
 
 import lombok.Data;
 

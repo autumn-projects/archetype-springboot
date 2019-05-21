@@ -1,7 +1,5 @@
-package com.oscroll.controller;
+package com.oscroll.domain.demo;
 
-import com.oscroll.entity.DemoEntity;
-import com.oscroll.service.DemoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

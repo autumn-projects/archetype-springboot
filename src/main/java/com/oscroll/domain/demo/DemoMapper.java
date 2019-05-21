@@ -1,6 +1,5 @@
-package com.oscroll.mapper;
+package com.oscroll.domain.demo;
 
-import com.oscroll.entity.DemoEntity;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
