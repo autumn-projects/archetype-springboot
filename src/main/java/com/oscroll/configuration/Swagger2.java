@@ -22,7 +22,7 @@ public class Swagger2 {
                 .apiInfo(apiInfo())
                 .select()
                 //为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.oscroll.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.oscroll.domain"))
                 .paths(PathSelectors.any())
                 .build();
     }

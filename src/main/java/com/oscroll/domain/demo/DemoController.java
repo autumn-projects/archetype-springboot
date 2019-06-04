@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -19,22 +18,24 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
+    @ApiOperation(value = "登录")
     @GetMapping("/login")
     @ResponseBody
     public String login(String userId, String password) {
         String token = null;
 
-        if("ray".equals(userId) && "123".equals(password)){
+        if ("ray".equals(userId) && "123".equals(password)) {
             token = JwtUtil.getToken(userId);
         }
 
         return token;
     }
 
+    @ApiOperation(value = "权限测试")
     @LoginToken
     @GetMapping("/getMessage")
     @ResponseBody
-    public String getMessage(){
+    public String getMessage() {
         return "pass";
     }
 

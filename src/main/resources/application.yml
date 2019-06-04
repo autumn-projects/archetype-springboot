@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://115.28.94.53:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
-    username: test
-    password: 123456
+    url: jdbc:mysql://115.28.94.53:3306/khala?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: oscroll123
 
 mybatis:
   #实体类所做包
