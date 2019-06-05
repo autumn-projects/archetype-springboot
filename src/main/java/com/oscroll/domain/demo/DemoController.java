@@ -18,27 +18,6 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
-    @ApiOperation(value = "登录")
-    @GetMapping("/login")
-    @ResponseBody
-    public String login(String userId, String password) {
-        String token = null;
-
-        if ("ray".equals(userId) && "123".equals(password)) {
-            token = JwtUtil.getToken(userId);
-        }
-
-        return token;
-    }
-
-    @ApiOperation(value = "权限测试")
-    @LoginToken
-    @GetMapping("/getMessage")
-    @ResponseBody
-    public String getMessage() {
-        return "pass";
-    }
-
     @ApiOperation(value = "查找全部")
     @GetMapping("/find")
     @ResponseBody

@@ -14,6 +14,11 @@ public class ResultUtil<T> {
     private String message;
     private T data;
 
+    public ResultUtil(){
+        this.code = 20000;
+        this.message = "success";
+    }
+
     public ResultUtil(T data){
         this.code = 20000;
         this.message = "success";

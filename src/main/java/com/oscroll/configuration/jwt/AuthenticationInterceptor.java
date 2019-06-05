@@ -39,13 +39,6 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 if (token == null) {
                     throw new RuntimeException("无token，请重新登录");
                 }
-                // 获取 token 中的 user id
-                String userId;
-                try {
-                    userId = JWT.decode(token).getAudience().get(0);
-                } catch (JWTDecodeException j) {
-                    throw new RuntimeException("401");
-                }
 
                 // 验证 token
                 JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(JwtUtil.SECRET)).build();
