@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Slf4j
 @Api(value = "User", tags = {"用户"})
 @RequestMapping("/user")
@@ -62,7 +64,8 @@ public class UserController {
     @PostMapping("/logout")
     @LoginToken
     @ResponseBody
-    public ResultUtil logout() {
+    public ResultUtil logout(HttpServletRequest request) {
+        log.info("用户注销:{}", request.getHeader("X-Token"));
         return new ResultUtil();
     }
 
