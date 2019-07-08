@@ -32,3 +32,16 @@ management:
       show-details: always
     shutdown:
       enabled: true #启用shutdown端点
+
+jwt:
+  tokenHeader: accessToken
+  authHeader: authorities
+  tokenPrefix: Bearer
+  secret: sexygirls
+  #minutes
+  expiration: 60
+  antMatchers: /index,\
+              /security/noauth,\
+              /swagger/**,/webjars/**,/swagger-resources/**,/v2/api-docs,/**/*.html,\
+              /exception/**,\
+              /lombok
